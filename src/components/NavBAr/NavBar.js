@@ -1,3 +1,7 @@
+import CartIcon from "../CartIcon/CartIcon";
+import CartWidget from "../CartWidget/CartWidget";
+
+
 export default function Navbar(){
     const headerStyles ={
         display: "flex",
@@ -31,11 +35,15 @@ return(
             FEMMERI
         </div>
         <ul className="links" style={ulStyle}>
-            <li className="link" style={liStyle}>Inicio</li>
-            <li className="link" style={liStyle}>Productos</li >
-            <li className="link" style={liStyle}>Contacto</li >
-            <li className="link" style={liStyle}>Nosotros</li >
+            <li className="link" style={liStyle}><a href="#">Inicio</a></li>
+            <li className="link" style={liStyle}><a href="#">Productos</a></li>
+            <li className="link" style={liStyle}><a href="#">Contacto</a></li>
+            <li className="link" style={liStyle}><a href="#">
+                <CartWidget/>
+                </a></li>
         </ul>
+        <CartIcon count={9} />
+        
     </header>
 
 );
